@@ -1,22 +1,33 @@
-# vscode
-.vscode 
-
-# Intellij
-*.iml
-.idea
-
-# npm
-node_modules
-
-# Don't include the compiled main.js file in the repo.
-# They should be uploaded to GitHub releases instead.
+# Build output — upload to GitHub releases, not the repo
 main.js
-
-# Exclude sourcemaps
 *.map
 
-# obsidian
+# Dependencies
+node_modules/
+
+# IDE / Editor
+.vscode/
+*.iml
+.idea/
+
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Obsidian
 data.json
 
-# Exclude macOS Finder (System Explorer) View States
-.DS_Store
+# AI agent files
+.ai/
+AGENTS.md
+CLAUDE.md
+COPILOT.md
+.cursorrules
+.cursor/
+.github/copilot-instructions.md
+
+.hotreload
