@@ -1,8 +1,214 @@
-/*
+.akb-menubar {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 16px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	flex-shrink: 0;
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.akb-menubar-btn {
+	font-size: 0.85em;
+	padding: 3px 10px;
+	cursor: pointer;
+	border-radius: 4px;
+}
 
-If your plugin does not need CSS, delete this file.
+.akb-menubar-input-row {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+}
 
-*/
+.akb-board {
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	padding: 16px;
+	height: 100%;
+	overflow-x: auto;
+	align-items: flex-start;
+}
+
+.akb-column {
+	display: flex;
+	flex-direction: column;
+	min-width: 220px;
+	max-width: 220px;
+	background-color: var(--background-secondary);
+	border-radius: 8px;
+	padding: 10px;
+	gap: 8px;
+}
+
+.akb-column-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 4px 2px 8px;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.akb-column-title {
+	font-weight: 600;
+	font-size: 0.95em;
+}
+
+.akb-add-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 1.1em;
+	color: var(--text-muted);
+	padding: 0 4px;
+	line-height: 1;
+	box-shadow: none;
+}
+
+.akb-add-btn:hover {
+	color: var(--text-normal);
+}
+
+.akb-header-actions {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	position: relative;
+}
+
+.akb-col-menu-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 1.1em;
+	color: var(--text-muted);
+	padding: 0 4px;
+	line-height: 1;
+	box-shadow: none;
+	letter-spacing: 0.05em;
+}
+
+.akb-col-menu-btn:hover {
+	color: var(--text-normal);
+}
+
+.akb-col-menu {
+	position: absolute;
+	top: calc(100% + 4px);
+	right: 0;
+	z-index: 100;
+	background: var(--background-primary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	min-width: 120px;
+	overflow: hidden;
+}
+
+.akb-col-menu--hidden {
+	display: none;
+}
+
+.akb-col-menu-item {
+	display: block;
+	width: 100%;
+	padding: 6px 12px;
+	text-align: left;
+	background: none;
+	border: none;
+	border-radius: 0;
+	cursor: pointer;
+	font-size: 0.9em;
+	color: var(--text-normal);
+	box-shadow: none;
+}
+
+.akb-col-menu-item:hover {
+	background: var(--background-modifier-hover);
+}
+
+.akb-col-menu-item--danger:hover {
+	color: var(--text-error);
+}
+
+.akb-col-rename-input {
+	font-weight: 600;
+	font-size: 0.95em;
+	width: 100%;
+	padding: 0;
+	border: none;
+	border-bottom: 1px solid var(--interactive-accent);
+	background: transparent;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+.akb-input-row {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.akb-input-row--hidden {
+	display: none;
+}
+
+.akb-input {
+	width: 100%;
+	font-size: 0.9em;
+}
+
+.akb-cards {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.akb-card-title {
+	font-size: 0.9em;
+}
+
+.akb-card-epic {
+	font-size: 0.75em;
+	color: var(--text-muted);
+	margin-top: 3px;
+}
+
+.akb-epic-select,
+.akb-assignee-select {
+	font-size: 0.85em;
+	width: 100%;
+}
+
+.akb-card-assignee {
+	font-size: 0.75em;
+	color: var(--text-muted);
+	margin-top: 2px;
+}
+
+.akb-assignee-list {
+	margin-bottom: 8px;
+}
+
+.akb-assignee-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 4px 0;
+}
+
+.akb-card--linked {
+	cursor: pointer;
+}
+
+.akb-card--linked:hover {
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.akb-card {
+	background-color: var(--background-primary);
+	border-radius: 6px;
+	padding: 8px 10px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	cursor: default;
+}
